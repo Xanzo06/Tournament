@@ -39,11 +39,8 @@ public class Tournament {
     public void printAllResults() {
         for (int i = 0; i < count; i++) {
             if (athletes[i] != null) {
-                System.out.println(athletes[i].getInfo());
-                System.out.println("Присед: " + athletes[i].getSquad());
-                System.out.println("Жим: " + athletes[i].getBenchPress());
-                System.out.println("Становая: " + athletes[i].getDeadlift());
-                System.out.println("Сумма: " + athletes[i].getTotal());
+                System.out.println(athletes[i].getAttemptInfo());
+                System.out.println("Сумма: " + athletes[i].getTotalScore());
                 System.out.println("---");
             }
         }

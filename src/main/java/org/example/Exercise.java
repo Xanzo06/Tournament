@@ -51,5 +51,30 @@ public class Exercise {
         return count;
     }
 
+    public String getAttemptInfo() {
+        StringBuilder info = new StringBuilder();
+        info.append("Упражнение: ").append(name).append("\n");
+        int attemptNumber = 1;
+        for (Attempt attempt : attempts) {
+            if (attempt != null) {
+                info.append("Попытка: ").append(attemptNumber)
+                        .append(": ").append(attempt.getWeight())
+                        .append(" кг -")
+                        .append(attempt.isSuccessful() ? "УСПЕШНО" : "НЕУДАЧНО")
+                        .append("\n");
+            } else {
+                info.append("Попытка ").append(attemptNumber).append(": ").append("Не выполнена").append("\n");
+            }
+            attemptNumber++;
+
+        }
+        info.append("Лучший результат: ").append(getBestResult()).append(" кг");
+
+        return info.toString();
+
+    }
+
 }
+
+
 

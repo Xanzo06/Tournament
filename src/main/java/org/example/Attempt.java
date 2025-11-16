@@ -35,5 +35,15 @@ public class Attempt {
         this.success = success;
     }
 
+    public String getInfo(){
+        String result;
+        if(isSuccessful()){
+            result = "УСПЕШНО";
+        }else {
+            result = "НЕУДАЧНО";
+        }
+        return "Попытка " + getAttemptNumber() + ": " + getWeight() + " кг- " + result;
+    }
+
 }
 
