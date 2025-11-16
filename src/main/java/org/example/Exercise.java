@@ -24,27 +24,32 @@ public class Exercise {
     public void setAttempts(Attempt[] attempts) {
         this.attempts = attempts;
     }
-    public void addAttempt(double weight, int attemptNumber, boolean success){
-        if (attemptNumber >= 1 && attemptNumber <= 3){
+
+    public void addAttempt(double weight, int attemptNumber, boolean success) {
+        if (attemptNumber >= 1 && attemptNumber <= 3) {
             attempts[attemptNumber - 1] = new Attempt(weight, attemptNumber, success);
         }
     }
-    public double getBestResult(){
+
+    public double getBestResult() {
         double best = 0.0;
         for (Attempt attempt : attempts) {
             if (attempt.getWeight() > best && attempt.isSuccessful()) {
                 best = attempt.getWeight();
             }
         }
-        return  best;
+        return best;
     }
+
     public int getSuccessfulAttemptsCount() {
         int count = 0;
         for (Attempt attempt : attempts) {
-            if (attempt.isSuccessful()){
+            if (attempt.isSuccessful()) {
                 count++;
             }
         }
         return count;
     }
+
 }
+
