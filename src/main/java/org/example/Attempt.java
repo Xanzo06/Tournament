@@ -2,8 +2,8 @@ package org.example;
 
 public class Attempt {
     private double weight;
-    boolean success;
     private int attemptNumber;
+    private boolean success;
 
     public Attempt(double weight, int attemptNumber, boolean success) {
         this.weight = weight;
