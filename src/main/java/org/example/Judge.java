@@ -7,7 +7,7 @@ public class Judge {
     int licenseNumber;
     int experienceYears;
 
-    public Judge(int licenseNumber, String name, int experienceYears) {
+    public Judge(String name, int licenseNumber, int experienceYears) {
         this.licenseNumber = licenseNumber;
         this.name = name;
         this.experienceYears = experienceYears;
