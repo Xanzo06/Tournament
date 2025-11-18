@@ -1,7 +1,5 @@
 package org.example;
 
-import jdk.jfr.Category;
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
