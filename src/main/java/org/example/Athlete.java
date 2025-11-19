@@ -5,16 +5,18 @@ public class Athlete {
     private int age;
     private int weight;
     private String category;
+    private boolean male;
 
     private Exercise squat;
     private Exercise benchPress;
     private Exercise deadlift;
 
-    public Athlete(String name, int age, int weight, String category) {
+    public Athlete(String name, int age, int weight, String category,boolean male) {
         this.name = name;
         this.age = age;
         this.weight = weight;
         this.category = category;
+        this.male = male;
 
         this.squat = new Exercise("Squat");
         this.benchPress = new Exercise("Bench Press");
@@ -58,5 +60,10 @@ public class Athlete {
     }
     public int getWeight(){
         return weight;
+    }
+
+    public boolean isMale() {
+        return male;
+
     }
 }
