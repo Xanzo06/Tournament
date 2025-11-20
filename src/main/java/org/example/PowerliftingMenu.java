@@ -2,15 +2,28 @@ package org.example;
 
 import java.util.Scanner;
 
+/**
+ * Класс интерактивного меню для управления турниром
+ * Позволяет пользователю добавлять атлетов, вводить результаты, искать атлетов, выводить результаты
+ */
 public class PowerliftingMenu {
 
     private Scanner scanner;
     private Tournament tournament;
 
+    /**
+     * Конструктор для создания объекта меню
+     * @param scanner объект класса Сканера для получения ввода от пользователя
+     * @param tournament объект класса Турнира с которым взаимодействует меню
+     */
     public PowerliftingMenu(Scanner scanner, Tournament tournament) {
         this.scanner = scanner;
         this.tournament = tournament;
     }
+
+    /**
+     * Метод выводит главное меню
+     */
 
     public void showMainMenu() {
         System.out.println("Меню турнира: ");
@@ -22,6 +35,11 @@ public class PowerliftingMenu {
         System.out.println("6. Выйти");
         System.out.println("Выберите опцию (1-6)");
     }
+
+    /**
+     * Метод обрабатывает выбор пользователя из главного меню и выполняет соответствующие действия
+     * @return true/false
+     */
 
     public boolean handleUserInput() {
         int choice = 0;
@@ -72,7 +90,9 @@ public class PowerliftingMenu {
         return true;
     }
 
-
+    /**
+     * Метод взаимодействует с пользователем для добавления нового атлета в турнир
+     */
     public void addNewAthlete() {
         System.out.println("Добавление нового атлета");
         String name = scanner.nextLine();
@@ -107,6 +127,9 @@ public class PowerliftingMenu {
 
     }
 
+    /**
+     * Метод взаимодействует с пользователем для ввода результатов попытки для созданного атлета
+     */
     public void inputCompetitionResults() {
         System.out.println("---Ввод результатов соревнований--- ");
         System.out.println("Введите имя Атлета:");
