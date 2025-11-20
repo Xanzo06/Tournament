@@ -1,7 +1,17 @@
 package org.example;
 
+/**
+ * Утилитный класс для расчета очков и сравнения атлетов по очкам
+ * Все методы статические
+ * @author Xanzo06
+ * @version 1.0
+ */
 public final class ScoringSystem {
-
+    /**
+     * Метод вычисляет и возвращает очки по формуле Уилкса
+     * @param athlete объект класса Атлета
+     * @return очки Уилкса
+     */
     public static double calculateWilksScore(Athlete athlete) {
         double weight = athlete.getWeight();
         double sum = athlete.getTotalScore();
@@ -44,7 +54,11 @@ public final class ScoringSystem {
                 e * Math.pow(weight, 4) +
                 f * Math.pow(weight, 5));
     }
-
+    /**
+     * Метод вычисляет и возвращает очки по системе IPF GL
+     * @param athlete объект класса Атлета
+     * @return очки IPF GL
+     */
     public static double calculateIPFPoints(Athlete athlete) {
         double weight = athlete.getWeight();
         double sum = athlete.getTotalScore();
@@ -74,6 +88,13 @@ public final class ScoringSystem {
         return (sum / (a + b * weight + c * Math.pow(weight, 2) + d * Math.pow(weight, 3))) * 100;
 
     }
+
+    /**
+     * Метод сравнивает двух атлетов по формуле Уилкса
+     * @param athlete1 первый атлет
+     * @param athlete2 второй атлет
+     * @return положительное значение, если очки атлета1 больше, отрицательное, если меньше,0, если равны
+     */
 
     public static int compareAthletes(Athlete athlete1, Athlete athlete2) {
 

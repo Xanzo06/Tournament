@@ -3,7 +3,19 @@ package org.example;
 import java.time.LocalDate;
 import java.util.Scanner;
 
+/**
+ * Главный класс приложения для управления турниром по тяжелой атлетике
+ * Иницализирует начальные значения и запускает интерактивное меню
+ * @author Xanzo06
+ * @version 1.0
+ *
+ */
 public class App {
+    /**
+     * Точка входа в приложение
+     * Иницализирует начальные значения и запускает интерактивное меню
+     * @param args аргументы командной строки
+     */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Tournament tournament = new Tournament("Турнир по тяжёлой атлетике", LocalDate.now(), "Москва");
